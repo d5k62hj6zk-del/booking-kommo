@@ -19,7 +19,7 @@ exports.handler = async (event) => {
       name: leadName,
       price: prix,
       _embedded: {
-        contacts: [{ name: nom, custom_fields_values: [] }]
+        contacts: [{ name: nom }]
       }
     }])
   });
@@ -31,4 +31,3 @@ exports.handler = async (event) => {
     return { statusCode: 200, body: JSON.stringify({ error: err }) };
   }
 };
-
